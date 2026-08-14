@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Demanda RPG (teste)</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="a-demanda.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        
+         <header>
+            <img src="icon.png" style="width: 20%; height: auto;" alt="Demanda Logo">
+            <h1 class="main-title">A Demanda</h1>
+            <div class="subtitle">Guia Básico de Sistema (teste)</div>
+        </header>
+
+        <nav class="tabs-nav">
+            <button class="tab-button active" onclick="switchTab('inicio')">Início</button>
+            <button class="tab-button" onclick="switchTab('personagens')">Personagens</button>
+            <button class="tab-button" onclick="switchTab('regras')">Regras</button>
+            <button class="tab-button" onclick="switchTab('combate')">Combate</button>
+            <button class="tab-button" onclick="switchTab('equipamento')">Itens e Equipamento</button>
+            <button class="tab-button" onclick="switchTab('progressao')">Progressão</button>
+            <button class="tab-button" onclick="switchTab('downloads')">Downloads</button>
+        </nav>
+
+        <div id="inicio" class="tab-content active">
+            <div class="panel">
+                <h2 class="section-title">Premissa</h2>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 10px;"><em>"<span class="emphasis">A Demanda</span> sempre existiu. É o chamado imortal que soa nos ouvidos dos seres vivos, os trazendo para a aventura, para o desconhecido. A Demanda é a alma heroica."</em></p>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 10px;"><em>~ Laron, sacerdote de Isma</em></p>
+                <p>
+                    Antes do mar ou do céu, do universo, antes mesmo dos deuses, havia <span class="emphasis">A Demanda</span>. <span class="emphasis">A Demanda</span> é uma vontade, um anseio por mudança, por movimento e, acima de tudo, por aventura. A Demanda moveu cada centímetro da criação e até hoje move todos os seres vivos. Particularmente, queima no coração dos herois, levando-os a lançar-se a lugares ermos e a enfrentar desafios e dores, e também daqueles que viajam e se alegram com o descobrimento.
+                </p>
+
+                <h2 class="section-title">Visão Geral</h2>
+                <p>
+                    <span class="emphasis">A Demanda</span> é um sistema de RPG que busca trazer uma experiência tática de jogo sem sacrificar os aspectos narrativos e sem resultar em um jogo complexo e pesado. Algumas inspirações para a criação do sistema foram:
+                </p>
+                <ul>
+                    <li>Fire Emblem</li>
+                    <li>Fabula Ultima</li>
+                </ul>
+            </div>
+        </div>
+
+         <div id="personagens" class="tab-content">
+            <div class="panel">
+                <h2 class="section-title">Características Gerais</h2>
+                <p>
+                    Um personagem em <span class="emphasis">A Demanda</span> possui:
+                </p>
+                <ul>
+                    <li><strong>Atributos</strong> que indicam suas capacidades naturais. Os seis atributos de <span class="emphasis">A Demanda</span> são: <strong>Vigor, Agilidade, Técnica, Mente, Empatia e Espírito</strong>.</li>
+                </ul>
+                <h2 class="section-title">Criação de Personagem</h2>
+            </div>
+            <p></p>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            // Esconde todos os conteúdos
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Desativa todos os botões
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Ativa o conteúdo selecionado
+            const targetContent = document.getElementById(tabId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+
+            // Ativa o botão clicado
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
+        }
+    </script>
+
+</body>

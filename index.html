@@ -169,7 +169,9 @@
 
     .project-card {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
         min-height: 290px;
         padding: 32px;
@@ -253,6 +255,37 @@
         color: var(--accent-purple);
     }
 
+    .project-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .project-logo {
+        width: 130px;
+        height: 130px;
+
+        flex-shrink: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: 30px;
+    }
+
+    .project-logo img {
+        max-width: 100%;
+        max-height: 100%;
+
+        object-fit: contain;
+
+        transition: transform 0.25s ease;
+    }
+
+    .project-card:hover .project-logo img {
+        transform: scale(1.05);
+    }
+
     /* =========================
        FOOTER
        ========================= */
@@ -327,20 +360,22 @@
 
             <a class="project-card" href="https://seamusgris.github.io/telion/">
 
-                <div class="project-symbol">
-                    ❖
+                <div class="project-info">
+                    <div class="project-name">
+                        Telion
+                    </div>
+
+                    <div class="project-type">
+                        Card Game
+                    </div>
+
+                    <div class="project-link">
+                        Explorar Telion →
+                    </div>
                 </div>
 
-                <div class="project-name">
-                    Telion
-                </div>
-
-                <div class="project-type">
-                    Card Game
-                </div>
-
-                <div class="project-link">
-                    Explorar Telion →
+                <div class="project-logo">
+                     <img src="icon.png" alt="Telion Logo">
                 </div>
 
             </a>
@@ -350,26 +385,18 @@
 
             <a class="project-card" href="/a-demanda/">
 
-                <div class="project-symbol">
-                    ✦
-                </div>
+                <div class="project-info">
+                    <div class="project-name">
+                        A Demanda
+                    </div>
 
-                <div class="project-name">
-                    A Demanda
-                </div>
+                    <div class="project-type">
+                        Sistema de RPG
+                    </div>
 
-                <div class="project-type">
-                    Projeto
-                </div>
-
-                <p class="project-description">
-                    Um projeto pessoal em desenvolvimento.
-                    Em breve, mais informações estarão disponíveis
-                    aqui.
-                </p>
-
-                <div class="project-link">
-                    Explorar A Demanda →
+                    <div class="project-link">
+                        Explorar A Demanda →
+                    </div>
                 </div>
 
             </a>
