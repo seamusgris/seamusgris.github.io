@@ -1,0 +1,287 @@
+:root {
+        --bg-main: #f4f0e7;
+        --bg-card: #fffdf8;
+        --bg-card-hover: #f0e9dc;
+
+        --accent-gold: #b58a18;
+        --accent-gold-light: rgba(181, 138, 24, 0.12);
+        --accent-purple: #8b4acb;
+        --accent-purple-light: rgba(139, 74, 203, 0.08);
+
+        --text-main: #29252d;
+        --text-muted: #746d77;
+
+        --border-gold: rgba(181, 138, 24, 0.30);
+
+        --font-heading: 'Cinzel', serif;
+        --font-body: 'Lora', serif;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100vh;
+
+        background-color: var(--bg-main);
+        color: var(--text-main);
+
+        font-family: var(--font-body);
+        font-size: 18px;
+        line-height: 1.7;
+
+        background-image:
+            radial-gradient(
+                circle at 15% 15%,
+                rgba(139, 74, 203, 0.045) 0%,
+                transparent 45%
+            ),
+            radial-gradient(
+                circle at 85% 85%,
+                rgba(181, 138, 24, 0.065) 0%,
+                transparent 45%
+            );
+
+        background-attachment: fixed;
+
+        -webkit-font-smoothing: antialiased;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px 25px 30px;
+        flex: 1;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    header {
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    .ornament {
+        color: var(--accent-gold);
+        font-size: 1.4rem;
+        margin-bottom: 14px;
+    }
+
+    .main-title {
+        font-family: var(--font-heading);
+        font-size: 3.4rem;
+        font-weight: 800;
+        letter-spacing: 6px;
+        color: var(--text-main);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: var(--accent-gold);
+        text-transform: uppercase;
+    }
+
+    .header-divider {
+        width: 220px;
+        height: 1px;
+        margin: 25px auto 0;
+        background: var(--border-gold);
+        position: relative;
+    }
+
+    .header-divider::after {
+        content: '❖';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--bg-main);
+        padding: 0 12px;
+        color: var(--accent-gold);
+        font-size: 0.9rem;
+    }
+
+    /* =========================
+       INTRO
+       ========================= */
+
+    .intro {
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto 45px;
+    }
+
+    .intro p {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+    }
+
+    /* =========================
+       PROJECTS
+       ========================= */
+
+    .projects-title {
+        font-family: var(--font-heading);
+        text-align: center;
+        font-size: 1.35rem;
+        color: var(--accent-gold);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 290px;
+        padding: 32px;
+
+        background: rgba(255, 253, 248, 0.88);
+
+        border: 1px solid var(--border-gold);
+        border-radius: 10px;
+
+        text-decoration: none;
+        color: inherit;
+
+        box-shadow: 0 8px 25px rgba(48, 39, 27, 0.07);
+
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            border-color 0.25s ease,
+            background 0.25s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+
+        background: var(--bg-card-hover);
+
+        border-color: var(--accent-gold);
+
+        box-shadow:
+            0 14px 30px rgba(48, 39, 27, 0.12),
+            0 0 20px rgba(181, 138, 24, 0.08);
+    }
+
+    .project-symbol {
+        font-size: 2rem;
+        color: var(--accent-gold);
+        margin-bottom: 15px;
+    }
+
+    .project-name {
+        font-family: var(--font-heading);
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--text-main);
+        margin-bottom: 12px;
+    }
+
+    .project-type {
+        font-family: var(--font-heading);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--accent-purple);
+        margin-bottom: 18px;
+    }
+
+    .project-description {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.65;
+        margin-bottom: 25px;
+    }
+
+    .project-link {
+        margin-top: auto;
+
+        font-family: var(--font-heading);
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        color: var(--accent-gold);
+        text-transform: uppercase;
+
+        transition: color 0.2s ease;
+    }
+
+    .project-card:hover .project-link {
+        color: var(--accent-purple);
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+        text-align: center;
+
+        padding: 25px;
+
+        color: var(--text-muted);
+        font-size: 0.85rem;
+
+        border-top: 1px solid var(--border-gold);
+        margin-top: 55px;
+    }
+
+    footer strong {
+        font-family: var(--font-heading);
+        color: var(--text-main);
+        letter-spacing: 1px;
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 700px) {
+        .container {
+            padding: 35px 18px 20px;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .project-card {
+            min-height: 250px;
+        }
+    }
