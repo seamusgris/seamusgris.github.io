@@ -13,7 +13,7 @@
     <div class="container">
         
          <header>
-            <img src="icon.png" style="width: 20%; height: auto;" alt="Demanda Logo">
+            <img src="demanda-icon.png" style="width: 20%; height: auto;" alt="Demanda Logo">
             <h1 class="main-title">A Demanda</h1>
             <div class="subtitle">Guia Básico de Sistema (teste)</div>
         </header>
@@ -56,11 +56,123 @@
                 </p>
                 <ul>
                     <li><strong>Atributos</strong> que indicam suas capacidades naturais. Os seis atributos de <span class="emphasis">A Demanda</span> são: <strong>Vigor, Agilidade, Técnica, Mente, Empatia e Espírito</strong>.</li>
+                    <li><strong>Evasão, Defesa e Movimento</strong>, características de combate que derivam dos atributos do personagem.</li>
+                    <li><strong>Vida e Resistência</strong>, pontos que indicam a saúde de seu personagem.</li>
+                    <li><strong>Classe</strong> de personagem, que indica seu modo de vida comum e suas habilidades especiais.</li>
+                    <li><strong>Afinidades</strong> com determinados equipamentos, magias ou técnicas.</li>
+                    <li><strong>Traços</strong> que indicam personalidade e a ideia geral de seu personagem.</li>
+                    <li><strong>Itens e Equipamentos</strong> levados por seu personagem.</li>
                 </ul>
                 <h2 class="section-title">Criação de Personagem</h2>
             </div>
             <p></p>
         </div>
+
+        <div id="regras" class="tab-content">
+            <div class="panel">
+                <h2 class="section-title">Mecânica Básica</h2>
+                <p>
+                    Em qualquer ação do personagem, o mestre pode pedir do jogador um <strong>teste</strong> para saber se o personagem teve sucesso nessa ação.
+                </p>
+                <p>
+                    Um teste consiste em: jogar <strong>2d8</strong> e somar ao resultado o valor de um <strong>atributo</strong> relacionado à ação, determinado pelo mestre. Se o resultado for igual ou superior ao valor de <strong>dificuldade</strong>, isso é um sucesso.
+                </p>
+                <p>
+                    As dificuldades padrão para testes são: <strong>10</strong> para testes <strong>comuns</strong>, <strong>7</strong> para testes <strong>fáceis</strong> e <strong>14</strong> para testes <strong>difíceis</strong>. Este valor pode variar de acordo com o arbítrio do mestre.
+                </p>
+                <p>Se, em um lance, um jogador conseguir o valor <strong>7 ou 8</strong> em ambos os dados, isso é um <strong>sucesso crítico</strong>. O jogador possui um grande sucesso, recebe uma Demanda e melhora a situação em que o personagem se encontra.</p>
+
+                <p>Se o mestre quiser dar uma <strong>vantagem</strong> ou <strong>desvantagem</strong> a um teste por qualquer motivo, isso se dará da seguinte maneira: em uma <strong>vantagem</strong>, o jogador irá rolar novamente o dado que obteve o menor resultado e manter o resultado maior; em uma <strong>desvantagem</strong>, ele irá rolar novamente o dado que obteve o maior resultado e manter o resultado menor. </p>
+
+                <h2 class="section-title">Demanda</h2>
+                <p>
+                    Demanda é um recurso que o jogador pode utilizar para ter vantagem em determinadas situações, invocando os Traços de seu personagem.
+                </p>
+                <p>
+                    Cada jogador começa uma sessão com um <i>token</i> de Demanda. Antes de qualquer teste, um jogador pode gastar uma Demanda para adicionar àquele teste um d8. Para isso, ele precisa explicitar a relação entre a situação do teste e <strong>um de seus Traços</strong>. Se isso acontecer, o jogador devolve o <i>token</i> ao mestre e marca um EXP em sua ficha.
+                </p>
+                <div class="highlight-box">
+                    <p>Por exemplo:</p>
+                    <p>
+                        Um jogador se encontra em uma situação em que precisa rastrear um fugitivo. Ele vê que seu personagem possui a Origem "Caçador", e pergunta do mestre se é viável usar Demanda para ter uma vantagem nesse teste, já que a sua Origem está relacionada à situação. O mestre permite, e o jogador gasta uma Demanda, tendo 1d8 adicional naquele teste e marcando um EXP na ficha do personagem.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="combate" class="tab-content">
+            <div class="panel">
+                <h2 class="section-title">Fases e Rodadas</h2>
+                <p>
+                    Os jogadores sempre são os primeiros a agir em um combate. O primeiro jogador a agir é o que possui maior Agilidade ou o que estiver mais pronto para agir. Ao terminar sua ação da rodada, o jogador deverá passar o turno para outro jogador de sua escolha que ainda não tenha agido nessa rodada. Assim que todos os jogadores tiverem agido, o mestre irá agir através de seus personagens como preferir, de forma que cada um tenha sua ação da rodada.
+                </p>
+
+                <h2 class="section-title">Movimento e Ações</h2>
+                <p>
+                    O combate em <span class="emphasis">A Demanda</span> foi feito para funcionar em um grid, isto é, um espaço quadriculado onde os personagens se movem. Adaptações podem ser feitas de forma não-oficial.
+                </p>
+                <p>
+                    Cada jogador pode mover-se um número de casas igual ao seu Movimento, em qualquer direção (menos em diagonais). Após mover-se, o jogador poderá realizar uma ação qualquer, que pode ser atacar, utilizar um item, mudar algo no cenário etc.
+                </p>
+                <p>Trocar de equipamento não consome a ação da rodada, exceto se este equipamento for armadura.</p>
+
+                <h2 class="section-title">Ataque e Dano</h2>
+                <p>Se um personagem resolver atacar um inimigo, ele <strong>não fará testes</strong>; ao invés disso, ele simplesmente irá <strong>rolar os dados de dano</strong> de sua arma (ou, se estiver desarmado, infligirá dano igual ao seu Vigor).</p>
+                <p>Se o dano de um ataque for <strong>igual ou maior à Evasão do oponente</strong>, o ataque acerta e o oponente recebe dano; caso contrário, o ataque é falho. <strong>A Defesa do oponente é subtraída do dano total</strong>, e o dano restante é subtraído da Resistência do oponente.</p>
+                <p>Vale lembrar que as armas possuem uma lógica de vantagens entre si, indicadas nas cartas de equipamento. Cada vantagem permite que o jogador role novamente um dado de dano.</p>
+
+                <h2 class="section-title">Resistência e Vida</h2>
+                <p>
+                    Quando um jogador recebe dano, este dano é subtraído de sua Resistência. Ao final de um combate, a Resistência retorna ao seu valor total. Se, porém, o jogador não tiver Resistência suficiente para absorver o dano, o dano restante é subtraído de sua Vida.
+                </p>
+                <p>
+                    Enquanto Resistência é recuperada automaticamente após o combate, Vida só pode ser recuperada se o personagem ir a um <strong>santuário</strong> e for restaurado. Cada santuário possui suas próprias práticas, por exemplo: um santuário pode ou não cobrar por seus serviços, pode ou não admitir a entrada de qualquer pessoa etc.
+                </p>
+                <p>Se um jogador perder toda a Vida, ele deverá rolar 2d6 e consultar a tabela de <strong>Traumas</strong> a seguir:</p>
+
+                <table class="dice-table">
+                    <thead>
+                        <tr>
+                            <th>2d6</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Morte.</strong> A alma de seu personagem abandona o corpo e encontra o seu destino no pós-vida.</td>
+                        </tr>
+                        <tr>
+                            <td>3–4</td>
+                            <td><strong>Perda grave.</strong>Jogue 2d4 e subtraia o resultado de seus atributos de forma distribuída. Seu personagem estará desacordado até o final do combate, a não ser que seja curado. Ao acordar, terá 1 Vida.</td>
+                        </tr>
+                        <tr>
+                            <td>5–6</td>
+                            <td><strong>Trauma.</strong> Seu personagem perde permanentemente um espaço de inventário. Seu personagem estará desacordado até o final do combate, a não ser que seja curado. Ao acordar, terá 1 Vida.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><strong>Cicatriz.</strong> Sofra uma perda física coerente com a narrativa (e.g. Perder um olho, uma mão, parte do nariz etc.). Seu personagem estará por duas rodadas, a não ser que seja curado. Ao acordar, terá 1 Vida.</td>
+                        </tr>
+                        <tr>
+                            <td>8-9</td>
+                            <td><strong>Desmaio.</strong> Seu personagem está inconsciente por duas rodadas, a não ser que seja curado. Ao acordar, terá 1 Vida.</td>
+                        </tr>
+                        <tr>
+                            <td>10-11</td>
+                            <td><strong>Escape.</strong> Uma arma ou armadura é quebrada e não pode mais ser utilizada. O personagem permanece de pé com 1 Vida.</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><strong>Milagre.</strong> Seu personagem permanece de pé com 5 Vida. Aproveite o favor dos deuses!</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
     </div>
 
     <script>
