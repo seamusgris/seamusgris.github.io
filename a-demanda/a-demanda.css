@@ -174,7 +174,7 @@
 
         h3.subsection-title {
             font-family: var(--font-heading);
-            font-size: 2rem;
+            font-size: 1.25rem;
             font-weight: 600;
             color: #302a33;
             margin: 24px 0 12px 0;
@@ -423,34 +423,4 @@
 
         .dice-table tr:hover td {
             background: var(--accent-blue-light);
-        }
-
-        .result-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            column-gap: 40px;
-            row-gap: 8px;
-
-            max-width: 700px;
-            margin: 20px auto;
-        }
-
-        .result-item {
-            display: flex;
-            align-items: baseline;
-            gap: 16px;
-
-            font-size: 1.1rem;
-        }
-
-        .result-number {
-            width: 25px;
-
-            color: var(--accent-gold);
-
-            font-family: var(--font-heading);
-            font-weight: 600;
-
-            text-align: right;
-            flex-shrink: 0;
         }
