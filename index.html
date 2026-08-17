@@ -15,19 +15,34 @@
 
 <style>
     :root {
-        --bg-main: #f4f0e7;
-        --bg-card: #fffdf8;
-        --bg-card-hover: #f0e9dc;
+        --bg-main: #193b37;
+        --bg-card: #e9e2d3;
+        --bg-card-hover: #ded5c2;
 
-        --accent-gold: #b58a18;
-        --accent-gold-light: rgba(181, 138, 24, 0.12);
+        /* --accent-beige: #526b5b;
+        --accent-beige-light: rgba(181, 138, 24, 0.12);
         --accent-purple: #8b4acb;
         --accent-purple-light: rgba(139, 74, 203, 0.08);
 
         --text-main: #29252d;
         --text-muted: #746d77;
 
-        --border-gold: rgba(181, 138, 24, 0.30);
+        --border-beige: rgba(181, 138, 24, 0.30);
+        */
+
+        --accent-green-dark: #294c43;
+        --accent-green-light: rgba(82, 107, 91, 0.12);
+
+        /* Bege / destaque */
+        --accent-beige: #c7b98f;
+        --accent-beige-light: rgba(199, 185, 143, 0.15);
+
+        /* Texto */
+        --text-main: #102724;
+        --text-light: #e9e2d3;
+        --text-muted: #68736d;
+
+        --border-beige: rgba(199, 185, 143, 0.35);
 
         --font-heading: 'Cinzel', serif;
         --font-body: 'Lora', serif;
@@ -87,7 +102,7 @@
     }
 
     .ornament {
-        color: var(--accent-gold);
+        color: var(--accent-beige);
         font-size: 1.4rem;
         margin-bottom: 14px;
     }
@@ -97,7 +112,7 @@
         font-size: 3.4rem;
         font-weight: 800;
         letter-spacing: 6px;
-        color: var(--text-main);
+        color: var(--text-light);
         text-transform: uppercase;
         margin-bottom: 8px;
     }
@@ -106,7 +121,7 @@
         font-family: var(--font-heading);
         font-size: 1rem;
         letter-spacing: 2px;
-        color: var(--accent-gold);
+        color: var(--accent-beige);
         text-transform: uppercase;
     }
 
@@ -114,7 +129,7 @@
         width: 220px;
         height: 1px;
         margin: 25px auto 0;
-        background: var(--border-gold);
+        background: var(--border-beige);
         position: relative;
     }
 
@@ -126,7 +141,7 @@
         transform: translate(-50%, -50%);
         background: var(--bg-main);
         padding: 0 12px;
-        color: var(--accent-gold);
+        color: var(--accent-beige);
         font-size: 0.9rem;
     }
 
@@ -153,7 +168,7 @@
         font-family: var(--font-heading);
         text-align: center;
         font-size: 1.35rem;
-        color: var(--accent-gold);
+        color: var(--accent-beige);
         letter-spacing: 2px;
         text-transform: uppercase;
         margin-bottom: 25px;
@@ -176,15 +191,15 @@
         min-height: 290px;
         padding: 32px;
 
-        background: rgba(255, 253, 248, 0.88);
+        background: var(--bg-card);
 
-        border: 1px solid var(--border-gold);
+        border: 1px solid var(--border-beige);
         border-radius: 10px;
 
         text-decoration: none;
         color: inherit;
 
-        box-shadow: 0 8px 25px rgba(48, 39, 27, 0.07);
+        box-shadow: 0 8px 25px rgba(5, 20, 18, 0.20);
 
         transition:
             transform 0.25s ease,
@@ -198,7 +213,7 @@
 
         background: var(--bg-card-hover);
 
-        border-color: var(--accent-gold);
+        border-color: var(--accent-beige);
 
         box-shadow:
             0 14px 30px rgba(48, 39, 27, 0.12),
@@ -207,7 +222,7 @@
 
     .project-symbol {
         font-size: 2rem;
-        color: var(--accent-gold);
+        color: var(--accent-beige);
         margin-bottom: 15px;
     }
 
@@ -245,7 +260,7 @@
         font-weight: 700;
         letter-spacing: 1px;
 
-        color: var(--accent-gold);
+        color: var(--text-main);
         text-transform: uppercase;
 
         transition: color 0.2s ease;
@@ -298,7 +313,7 @@
         color: var(--text-muted);
         font-size: 0.85rem;
 
-        border-top: 1px solid var(--border-gold);
+        border-top: 1px solid var(--border-beige);
         margin-top: 55px;
     }
 

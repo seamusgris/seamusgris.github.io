@@ -20,9 +20,9 @@
 
         <nav class="tabs-nav">
             <button class="tab-button active" onclick="switchTab('inicio')">Início</button>
-            <button class="tab-button" onclick="switchTab('personagens')">Personagens</button>
             <button class="tab-button" onclick="switchTab('regras')">Regras</button>
             <button class="tab-button" onclick="switchTab('combate')">Combate</button>
+            <button class="tab-button" onclick="switchTab('personagens')">Criação de Personagens</button>
             <button class="tab-button" onclick="switchTab('equipamento')">Itens e Equipamento</button>
             <button class="tab-button" onclick="switchTab('progressao')">Progressão</button>
             <button class="tab-button" onclick="switchTab('downloads')">Downloads</button>
@@ -50,7 +50,7 @@
 
          <div id="personagens" class="tab-content">
             <div class="panel">
-                <h2 class="section-title">Características Gerais</h2>
+                <!-- <h2 class="section-title">Características Gerais</h2>
                 <p>
                     Um personagem em <span class="emphasis">A Demanda</span> possui:
                 </p>
@@ -63,20 +63,27 @@
                     <li><strong>Afinidades</strong> com determinados equipamentos, magias ou técnicas.</li>
                     <li><strong>Traços</strong> que indicam personalidade e a ideia geral de seu personagem.</li>
                     <li><strong>Itens e Equipamentos</strong> levados por seu personagem.</li>
-                </ul>
-                <h2 class="section-title">Criação de Personagem</h2>
+                </ul> -->
+
                 <p>Utilize a ficha de personagem para guardar as informações sobre o seu personagem. Inicie dando um <strong>nome</strong> a ele. Em seguida, siga estas etapas, não necessariamente nesta ordem:</p>
                 
-                <h3 class="subsection-title">Ancestralidade e Classe</h3>
+                <h2 class="section-title">Ancestralidade e Classe</h2>
                 <p>
-                    Escolha uma carta de Ancestralidade e Classe para seu personagem, e anote esta informação na ficha. Cada Ancestralidade e Classe inicia no <i>rank</i> D.
+                    Escolha uma carta de Ancestralidade e uma de Classe para seu personagem, e anote esta informação na ficha. Cada Ancestralidade e Classe inicia no <i>rank</i> D.
+                </p>
+                <p>
+                    A Ancestralidade indica principalmente as características biológicas do personagem, mas também abrande fatores culturais. Classe indica seu modo de vida, suas proficiências e suas habilidade especiais.
                 </p>
 
-                <h3 class="subsection-title">Traços</h3>
+                <h2 class="section-title">Traços</h2>
                 <p>Não há ordem certa para criar os Traços de seu personagem, siga a ordem que parecer mais lógica a você. Além dos itens deste tópico, Classe também conta como um Traço.</p>
+                
+                <h3 class="subsection-title">Conceito</h3>
                 <p>
-                    Escreva o <strong>Conceito</strong> de seu personagem. O Conceito deve ser breve e deve englobar a ideia geral de seu personagem, podendo incluir aspectos como: aparência, motivação, eventos centrais, costumes etc.
+                    Escreva o <strong>Conceito</strong> de seu personagem. O Conceito é uma descrição de seu personagem que deve ser breve e deve englobar a ideia geral dele, podendo incluir aspectos como: aparência, motivação, eventos centrais, costumes etc.
                 </p>
+
+                <h3 class="subsection-title">Origem, Tema e Personalidade</h3>
                 <p>
                     Escolha ou role aleatoriamente <strong>a Origem, o Tema e a Personalidade</strong> de seu personagem. Cada um destes Traços possuem uma tabela de geração aleatória, porém você pode escolher um item, se preferir, ou mesmo criar um Traço de acordo com a sua ideia para o personagem (inclusive, isso é incentivado).
                 </p>
@@ -323,9 +330,9 @@
 
                 </div>
 
-                <h3 class="subsection-title">Afinidades</h3>
+                <h2 class="section-title">Afinidades</h2>
                 <p>
-                    Escolha <strong>três afinidades</strong> para o seu personagem, anotando-as no <i>rank</i> D de sua ficha. As afinidades são agrupadas em:
+                    Seu personagem possui um grau de <strong>Afinidades</strong> (isto é, experiência e familiaridade) com determinados equipamentos ou artes. Escolha <strong>três afinidades</strong> para o seu personagem, anotando-as no <i>rank</i> D de sua ficha. As afinidades são agrupadas em:
                 </p>
                 <p>
                     <strong>Armas:</strong> Espadas, Machados, Lanças, Arcos, Marciais.
@@ -340,7 +347,10 @@
                     <strong>Instrumentos:</strong> Lira, Flauta, Percussão.
                 </p>
 
-                <h3 class="subsection-title">Atributos</h3>
+                <h2 class="section-title">Atributos</h2>
+                <p>
+                    Os <strong>Atributos</strong> indicam as capacidades intrínsecas ao seu personagem.
+                </p>
                 <p>
                     O jogador deve <strong>distribuir 8 pontos</strong> entre os atributos. Um atributo com valor 1 significa a média humana, 3 significa acima da média. Também é possível ter <strong>valores negativos</strong>: 0 significa levemente abaixo da média, -2 representa abaixo da média.
                 </p>
@@ -348,15 +358,23 @@
                     É possível retirar pontos de um atributo voluntariamente para aumentar outros atributos, mas não é permitido ultrapassar o limite de 5 e -5.
                 </p>
 
-                <h3 class="subsection-title">Evasão, Defesa e Movimento</h3>
-                <p>Estas três características são derivadas dos atributos, e nenhuma delas podem ser menores do que 1:</p>
-                <p style="text-align: center;"><i>Evasão = Agilidade + Técnica</i></p>
-                <p style="text-align: center;"><i>Defesa = Vigor + defesa da armadura</i></p>
+                <h2 class="section-title">Evasão, Defesa e Movimento</h2>
+                <p>Estas são características derivadas que afetam basicamente o combate do jogo, e o valor mínimo de cada uma delas é 1:</p>
+                <p style="text-align: center;"><i>Evasão = Agilidade + 5</i></p>
+                <p style="text-align: center;"><i>Defesa = defesa da armadura</i></p>
                 <p style="text-align: center;"><i>Movimento = Agilidade * 2</i></p>
 
-                <h3 class="subsection-title">Resistência e Vida</h3>
+                <h2 class="section-title">Resistência e Vida</h2>
                 <p>
                     O valor base de Resistência é <strong>(Vigor * 3) + resistência da armadura</strong>, e o valor base de Vida é sempre <strong>10</strong>. O valor total de Resistência nunca pode ser menor do que 0.
+                </p>
+
+                <h2 class="section-title">Itens e Equipamento</h2>
+                <p>
+                    Cada jogador possui um total de <strong>50 Ac (aces)</strong> iniciais para comprar itens e equipamentos para o personagem.
+                </p>
+                <p>
+                    Um personagem possui <strong>8 espaços de inventário</strong>, sendo que cada espaço é ocupado por um item ou equipamento. <strong>Dinheiro ocupa espaço de inventário</strong>, porém um espaço de inventário ocupa uma quantidade indefinida de dinheiro.
                 </p>
 
                 </div>
@@ -412,8 +430,8 @@
 
                 <h2 class="section-title">Ataque e Dano</h2>
                 <p>Se um personagem resolver atacar um inimigo, ele <strong>não fará testes</strong>; ao invés disso, ele simplesmente irá <strong>rolar os dados de dano</strong> de sua arma (ou, se estiver desarmado, infligirá dano igual ao seu Vigor).</p>
-                <p>Se o dano de um ataque for <strong>igual ou maior à Evasão do oponente</strong>, o ataque acerta e o oponente recebe dano; caso contrário, o ataque é falho. <strong>A Defesa do oponente é subtraída do dano total</strong>, e o dano restante é subtraído da Resistência do oponente.</p>
-                <p>Vale lembrar que as armas possuem uma lógica de vantagens entre si, indicadas nas cartas de equipamento. Cada vantagem permite que o jogador role novamente um dado de dano.</p>
+                <p>Se o dano de um ataque for <strong>igual ou maior à Evasão do oponente</strong>, o ataque acerta e o oponente recebe dano; caso contrário, o oponente evade o ataque. <strong>A Defesa do oponente é subtraída do dano total</strong>, e o dano restante é subtraído da Resistência do oponente.</p>
+                <p>Vale lembrar que as armas possuem uma lógica de vantagens entre si, indicadas nas cartas de equipamento. Cada vantagem permite que o jogador role novamente um dos dado de dano, à sua escolha.</p>
 
                 <h2 class="section-title">Resistência e Vida</h2>
                 <p>
