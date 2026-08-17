@@ -10,6 +10,26 @@
 
 <body>
     
+    <!-- Botão para abrir/fechar a sidebar -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+    <!-- Sidebar Retrátil -->
+    <aside class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">✕</button>
+        <div class="sidebar-header">
+            <h3>Navegação</h3>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="tab-button active" onclick="switchTab(event, 'inicio')">Início</button>
+            <button class="tab-button" onclick="switchTab(event, 'personagens')">Criação de Personagens</button>
+            <button class="tab-button" onclick="switchTab(event, 'regras')">Regras</button>
+            <button class="tab-button" onclick="switchTab(event, 'combate')">Combate</button>
+            <button class="tab-button" onclick="switchTab(event, 'equipamento')">Itens e Equipamento</button>
+            <button class="tab-button" onclick="switchTab(event, 'progressao')">Progressão</button>
+            <button class="tab-button" onclick="switchTab(event, 'downloads')">Downloads</button>
+        </nav>
+    </aside>
+
     <div class="container">
         
          <header>
@@ -17,16 +37,6 @@
             <h1 class="main-title">A Demanda</h1>
             <div class="subtitle">Guia Básico de Sistema (teste)</div>
         </header>
-
-        <nav class="tabs-nav">
-            <button class="tab-button active" onclick="switchTab('inicio')">Início</button>
-            <button class="tab-button" onclick="switchTab('regras')">Regras</button>
-            <button class="tab-button" onclick="switchTab('combate')">Combate</button>
-            <button class="tab-button" onclick="switchTab('personagens')">Criação de Personagens</button>
-            <button class="tab-button" onclick="switchTab('equipamento')">Itens e Equipamento</button>
-            <button class="tab-button" onclick="switchTab('progressao')">Progressão</button>
-            <button class="tab-button" onclick="switchTab('downloads')">Downloads</button>
-        </nav>
 
         <div id="inicio" class="tab-content active">
             <div class="panel">
@@ -36,15 +46,42 @@
                 <p>
                     Antes do mar ou do céu, do universo, antes mesmo dos deuses, havia <span class="emphasis">A Demanda</span>. <span class="emphasis">A Demanda</span> é uma vontade, um anseio por mudança, por movimento e, acima de tudo, por aventura. A Demanda moveu cada centímetro da criação e até hoje move todos os seres vivos. Particularmente, queima no coração dos herois, levando-os a lançar-se a lugares ermos e a enfrentar desafios e dores, e também daqueles que viajam e se alegram com o descobrimento.
                 </p>
+                <p>
+                    Neste jogo, você e seus amigos irão desbravar um mundo de perigos e maravilhas, exercitando a imaginação e a interpretação e colaborando para construir uma narrativa fantástica.
+                </p>
 
                 <h2 class="section-title">Visão Geral</h2>
                 <p>
-                    <span class="emphasis">A Demanda</span> é um sistema de RPG que busca trazer uma experiência tática de jogo sem sacrificar os aspectos narrativos e sem resultar em um jogo complexo e pesado. Algumas inspirações para a criação do sistema foram:
+                    <span class="emphasis">A Demanda</span> é um sistema de RPG que busca trazer uma experiência tática de jogo sem sacrificar os aspectos narrativos e sem resultar em um jogo complexo demais ou pesado. Algumas inspirações para a criação do sistema foram a série de jogos <i>Fire Emblem</i> e o RPG <i>Fabula Ultima</i>.
                 </p>
-                <ul>
-                    <li>Fire Emblem</li>
-                    <li>Fabula Ultima</li>
-                </ul>
+
+                <h2 class="section-title">O que é RPG?</h2>
+                <p>
+                    RPG é uma sigla que significa <i>Role Playing Game</i>, ou seja, "Jogo de Interpretação". Interpretar, neste caso, significa conduzir o seu personagem através da história, levando em conta sua motivação, história pregressa, habilidades especiais, personalidade etc.
+                </p>
+                <p>
+                    Um dos jogadores é chamado de "mestre do jogo", ou apenas<strong>"mestre"</strong>, e ele irá coordenar o jogo e o mundo no qual a história terá lugar. Os outros jogadores irão criar personagens e interpretá-los dentro do mundo e da história apresentada pelo mestre.
+                </p>
+                <p>
+                    Além da história, o sistema de RPG dispõe de regras que visa deixar a sequência de eventos da história mais justa para todos, e frequentemente contém um sistema de combate que permite batalhas emocionantes entre os personagens e os oponentes controlados pelo mestre.
+                </p>
+                <p>
+                    Acima de tudo, RPG é um jogo social, onde os jogadores se reunem e compartilham histórias aventurosas, épicas, trágicas ou, quiçá, até românticas.
+                </p>
+                <p>
+                    Portanto, seja através da interpretação, do sistema ou do tempo com os amigos, o RPG oferece diversão para todos os que possuem uma imaginação fértil e um bom humor.
+                </p>
+
+                <h2 class="section-title">Materiais necessários</h2>
+                <p>
+                    Este RPG necessita de <strong>dados</strong> de diferentes tamanhos. Um dado é indicado pela letra <i>d</i> e um número à direita, que indica seu número de lados; por exemplo, d8 significa "dado de 8 lados". É possível colocar um número à esquerda para indicar o número de dados; por exemplo, 2d8 significa "2 dados de 8 lados".
+                </p>
+                <p>
+                    O combate em <span class="emphasis">A Demanda</span> utiliza um grid, ou seja, um "mapa" quadriculado para o movimento dos personagens. Essa regra pode ser ignorada, mas o balanceamento e bom funcionamento do combate não é garantido nesse caso.
+                </p>
+                <p>
+                    Cada jogador precisará de uma ficha de personagem, cartas de equipamento, ancestralidade e classe, as quais estão todas na seção de Downloads. Leve também lápis e caneta!
+                </p>
             </div>
         </div>
 
@@ -72,11 +109,13 @@
                     Escolha uma carta de Ancestralidade e uma de Classe para seu personagem, e anote esta informação na ficha. Cada Ancestralidade e Classe inicia no <i>rank</i> D.
                 </p>
                 <p>
-                    A Ancestralidade indica principalmente as características biológicas do personagem, mas também abrande fatores culturais. Classe indica seu modo de vida, suas proficiências e suas habilidade especiais.
+                    A Ancestralidade indica principalmente as características biológicas do personagem, mas também abrange fatores culturais. Classe indica seu modo de vida, suas proficiências e suas habilidade especiais.
                 </p>
 
                 <h2 class="section-title">Traços</h2>
-                <p>Não há ordem certa para criar os Traços de seu personagem, siga a ordem que parecer mais lógica a você. Além dos itens deste tópico, Classe também conta como um Traço.</p>
+                <p>
+                    Cada Traço carrega informações importantes sobre quem é o seu personagem e como ele é, e podem ser usadas durante o jogo. Não há ordem certa para criar os Traços de seu personagem, siga a ordem que parecer mais lógica a você. Além dos itens deste tópico, Classe também conta como um Traço.
+                </p>
                 
                 <h3 class="subsection-title">Conceito</h3>
                 <p>
@@ -488,7 +527,14 @@
     </div>
 
     <script>
-        function switchTab(tabId) {
+        // Alterna a exibição da Sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // Troca de Aba
+        function switchTab(event, tabId) {
             // Esconde todos os conteúdos
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
@@ -507,7 +553,13 @@
             if (event && event.currentTarget) {
                 event.currentTarget.classList.add('active');
             }
+
+            // Fecha a sidebar automaticamente
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.remove('open');
         }
     </script>
+
+
 
 </body>

@@ -33,7 +33,6 @@
 
         .emphasis {
             font-family: var(--font-heading);
-            font-size: 19px;
         }
 
         body {
@@ -454,3 +453,109 @@
              text-align: right;
              flex-shrink: 0;
          }
+
+         /* BOTÃO DE ABRIR A SIDEBAR */
+        .sidebar-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: var(--bg-card);
+            color: var(--accent-gold);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-toggle:hover {
+            background: var(--bg-card-hover);
+            color: var(--accent-blue);
+        }
+
+        /* ESTRUTURA DA SIDEBAR */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -280px; /* Escondida por padrão */
+            width: 280px;
+            height: 100vh;
+            background: var(--bg-card);
+            border-right: 1px solid var(--border-color);
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
+            z-index: 1001;
+            transition: left 0.3s ease;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Classe ativada pelo JS */
+        .sidebar.open {
+            left: 0;
+        }
+
+        .close-btn {
+            align-self: flex-end;
+            background: transparent;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .close-btn:hover {
+            color: var(--accent-red);
+        }
+
+        .sidebar-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-header h3 {
+            font-family: var(--font-heading);
+            color: var(--accent-gold);
+            text-align: center;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* AJUSTE DOS BOTÕES DENTRO DA SIDEBAR */
+        .tab-button {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-muted);
+            padding: 10px 15px;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: left;
+            width: 100%;
+        }
+
+        .tab-button:hover {
+            color: #29242c;
+            border-color: var(--border-color);
+            background: var(--bg-card-hover);
+        }
+
+        .tab-button.active {
+            background: var(--accent-gold);
+            color: #fffdf8;
+            border-color: var(--accent-gold);
+            box-shadow: 0 3px 8px rgba(181, 138, 24, 0.22);
+        }
