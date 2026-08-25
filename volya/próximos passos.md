@@ -1,0 +1,3 @@
+- [ ] Mudar nome do RPG para "A Senda"
+- [ ] Retirar as perícias e focar em talentos, como Shadowdark
+	- [ ] Implementar proficiência em armas e magia apenas, sem haver perícias diversas
