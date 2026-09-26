@@ -1,0 +1,271 @@
+/* --- Root Variables & Theme Colors --- */
+
+@font-face {
+            font-family: 'Righteous';
+            src: url('./fonts/Righteous-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+@font-face {
+            font-family: 'FiraSans';
+            src: url('./fonts/FiraSans-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+:root {
+  /* Soft Off-white background instead of pure #FFFFFF to reduce glare */
+  --bg-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --surface-secondary: #f0f2f5;
+
+  /* Typography & Accents */
+  --text-main: #2b2d42;
+  --text-muted: #6c757d;
+  --border-color: #e9ecef;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+
+  /* Typography */
+  --font-heading: Righteous, sans-serif;
+  --font-main: FiraSans, sans-serif;
+  --max-width: 900px;
+}
+
+/* --- Base Reset --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-align: justify;
+}
+
+/* --- Layout Container --- */
+.main-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* --- Header & Navigation Bar --- */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(248, 249, 250, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 100;
+  font-family: var(--font-heading);
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-main);
+}
+
+/* --- Sections --- */
+.section {
+  padding: 3.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+}
+
+.lead {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Cards & Grid --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* --- Character Creation Steps --- */
+.step-list {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step-list li {
+  font-size: 1rem;
+}
+
+/* --- Downloads Section --- */
+.download-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.download-item {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.download-item p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--text-main);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: #4a5568;
+}
+
+/* --- Footer --- */
+.footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- Responsive Navigation --- */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: -0.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.bullet-list {
+  padding-left: 1.25rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bullet-list li {
+  font-size: 0.95rem;
+}
+
+.bullet-list li strong {
+  color: var(--text-main);
+}
+
+.note-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 0.75rem;
+}
