@@ -8,8 +8,29 @@
         }
 
 @font-face {
-            font-family: 'FiraSans';
-            src: url('./fonts/FiraSans-Regular.ttf') format('truetype');
+            font-family: 'OdibeeSans';
+            src: url('./fonts/OdibeeSans-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+@font-face {
+            font-family: 'Kelvinch';
+            src: url('./fonts/Kelvinch-1GY8j.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+@font-face {
+            font-family: 'IMFGP';
+            src: url('./fonts/IMFellGreatPrimerSC-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+@font-face {
+            font-family: 'Karla';
+            src: url('./fonts/Karla-VariableFont_wght.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
